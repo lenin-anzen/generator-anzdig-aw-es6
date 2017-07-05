@@ -7,15 +7,11 @@ const Generator = require('yeoman-generator');
  * @class
  * @extends Generator
  * @requires yeoman-generator
- * @requires yosay
- * @requires chalk
  */
 class PackageClass extends Generator {
   /**
      * Declare vars
      * @override
-     * @requires ../package
-     * @see {@link PackageClass}
      * @return {void}
      */
   initializing() {

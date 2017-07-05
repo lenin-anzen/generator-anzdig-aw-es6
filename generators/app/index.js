@@ -25,7 +25,7 @@ class AppClass extends Generator {
     super(args, opts);
 
     // Get an argument from the cli
-    this.option('noinstall');
+    this.option('skip-install');
   }
 
   /**
@@ -37,6 +37,7 @@ class AppClass extends Generator {
    */
   initializing() {
     this.composeWith(require.resolve('../package'));
+    this.composeWith(require.resolve('../webpack'));
   }
 
   /**
@@ -71,7 +72,7 @@ class AppClass extends Generator {
    * 
    */
   install() {
-    if (this.options.noinstall !== true) {
+    if (this.options['skip-install'] !== true) {
       this.installDependencies({
         bower: false
       });
