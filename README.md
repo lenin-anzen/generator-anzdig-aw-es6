@@ -1,4 +1,5 @@
-# generator-anzdig-aw-es6 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-anzdig-aw-es6 
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
 > Angular 1, webpack 2, ECMAScript 6, Babel, etc.
 
@@ -15,6 +16,12 @@ Then generate your new project:
 
 ```bash
 yo anzdig-aw-es6
+```
+
+## Usage
+
+```bash
+npm start
 ```
 
 ## Getting To Know Yeoman
