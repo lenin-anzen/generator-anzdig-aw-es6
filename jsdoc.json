@@ -1,0 +1,25 @@
+{
+  "source": {
+    "include": ["README.md", "generators", "__tests__"],
+    "includePattern": ".+\\.js(doc)?$"
+  },
+  "opts": {
+    "recurse": true,
+    "destination": "./docs",
+    "template": "node_modules/tui-jsdoc-template",
+    "package": "package.json",
+    "tutorials": "tutorial"
+  },
+  "templates": {
+    "logo": {
+        "url": "https://raw.githubusercontent.com/yeoman/yeoman.github.io/source/app/assets/img/logo.png",
+        "width": "127px",
+        "height": "14px"
+    },
+    "name": "Generator",
+    "footerText": "MIT license Copyright (c) Lenin Meza"
+  },
+  "plugins": [
+    "plugins/markdown"
+  ]
+}

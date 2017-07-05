@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Lenin Meza",
+      "authorEmail": "lmeza@anzen.com.mx",
+      "authorUrl": "https://travis-ci.org/lenin-anzen"
+    }
+  }
+}

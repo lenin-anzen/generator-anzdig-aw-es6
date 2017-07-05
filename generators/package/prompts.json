@@ -1,0 +1,32 @@
+[
+    {
+        "type": "input",
+        "name": "name",
+        "message": "What is your project 'name'?",
+        "default": "webapp"
+    }, {
+        "type": "input",
+        "name": "version",
+        "message": "Version project number?",
+        "default": "1.0.0"
+    }, {
+        "type": "input",
+        "name": "description",
+        "message": "Project description?",
+        "default": ""
+    }, {
+        "type": "input",
+        "name": "author",
+        "message": "Author 'name'?",
+        "default": ""
+    }, {
+        "type": "input",
+        "name": "mail",
+        "message": "Author mail?"
+    }, {
+        "type": "input",
+        "name": "gitUrl",
+        "message": "Project repository git URL?",
+        "default": "https://github.com/anzen/anzdig.webapp"
+    }
+]

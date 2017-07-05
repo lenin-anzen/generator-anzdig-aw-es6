@@ -1,0 +1,22 @@
+{
+  "name": "<%= name %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
+  "main": "/src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "<%= author %>",
+    "mail": "<%= mail %>"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "<%= gitUrl %>"
+  },
+  "keywords": [],
+  "devDependencies": {},
+  "dependencies": {},
+  "private": true
+}

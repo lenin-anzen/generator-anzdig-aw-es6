@@ -1,0 +1,60 @@
+{
+  "name": "generator-anzdig-aw-es6",
+  "version": "0.0.2",
+  "description": "Angular 1, webpack 2, ECMAScript 6, Babel",
+  "homepage": "https://lenin-anzen.github.io/generator-anzdig-aw-es6",
+  "author": {
+    "name": "Lenin Meza",
+    "email": "lmeza@anzen.com.mx",
+    "url": "https://travis-ci.org/lenin-anzen"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "yeoman",
+    "generator",
+    "angular",
+    "webpack",
+    "es6",
+    "babel",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "coveralls": "^2.13.1",
+    "eslint": "^4.1.0",
+    "eslint-config-xo-space": "^0.16.0",
+    "jest": "^19.0.2",
+    "jest-cli": "^20.0.0",
+    "jsdoc": "^3.4.3",
+    "nsp": "^2.6.3",
+    "tui-jsdoc-template": "^1.1.0",
+    "yeoman-assert": "^3.0.0",
+    "yeoman-test": "^1.6.0"
+  },
+  "dependencies": {
+    "yeoman-generator": "^1.0.0",
+    "chalk": "^1.1.3",
+    "yosay": "^2.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "prepublish": "nsp check",
+    "pretest": "eslint . --fix",
+    "test": "jest",
+    "docs": "jsdoc -c jsdoc.json"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  },
+  "repository": "lenin-anzen/generator-anzdig-aw-es6",
+  "license": "MIT",
+  "private": false
+}
