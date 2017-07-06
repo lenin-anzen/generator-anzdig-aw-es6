@@ -20,6 +20,7 @@ yo anzdig-aw-es6
 
 ## Usage
 
+Start Webpack-Dev-Server with:
 ```bash
 npm start
 ```
@@ -42,5 +43,5 @@ MIT © [Lenin Meza](https://travis-ci.org/lenin-anzen)
 [travis-url]: https://travis-ci.org/lenin-anzen/generator-anzdig-aw-es6
 [daviddm-image]: https://david-dm.org/lenin-anzen/generator-anzdig-aw-es6.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/lenin-anzen/generator-anzdig-aw-es6
-[coveralls-image]: https://coveralls.io/repos/lenin-anzen/generator-anzdig-aw-es6/badge.svg
-[coveralls-url]: https://coveralls.io/r/lenin-anzen/generator-anzdig-aw-es6
+[coveralls-image]: https://coveralls.io/repos/github/lenin-anzen/generator-anzdig-aw-es6/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/lenin-anzen/generator-anzdig-aw-es6?branch=master
