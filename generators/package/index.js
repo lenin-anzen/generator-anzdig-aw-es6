@@ -3,28 +3,27 @@
 const Generator = require('yeoman-generator');
 
 /**
- * Package Class
+ * Package Class: Generate initial config files.
  * @class
  * @extends Generator
  * @requires yeoman-generator
  */
 class PackageClass extends Generator {
   /**
-     * Declare vars
-     * @override
-     * @return {void}
-     */
+   * Declare vars
+   * @override
+   * @return {void}
+   */
   initializing() {
     this.props = {};
   }
   /**
-     * Prompt the initial greeting to the user.
+     * Prompts the info data of the project.
      * @override
      * @return {void}
      */
   prompting() {
     const prompts = require('./prompts.json');
-
     return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
       this.props = props;
@@ -32,11 +31,11 @@ class PackageClass extends Generator {
   }
 
   /**
-     * Where you write the generator specific files (routes, controllers, etc)
-     * @override
-     * @return {void}
-     */
-  writing() {
+   * Saving configurations and configure the project: package.json, .gitignore
+   * @override
+   * @return {void}
+   */
+  configuring() {
     this.fs.copyTpl(
       this.templatePath('_package.json'),
       this.destinationPath('package.json'),

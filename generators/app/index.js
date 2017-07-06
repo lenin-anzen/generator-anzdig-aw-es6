@@ -24,7 +24,7 @@ class AppClass extends Generator {
   constructor(args, opts) {
     super(args, opts);
 
-    // Get an argument from the cli
+    // Get an argument from the cli --skip-install
     this.option('skip-install');
   }
 
@@ -33,6 +33,8 @@ class AppClass extends Generator {
    * @override
    * @requires ../package
    * @see {@link PackageClass}
+   * @requires ../webpack
+   * @see {@link WebpackClass}
    * @return {void}
    */
   initializing() {

@@ -9,20 +9,21 @@ describe('generator-anzdig-aw-es6:app', () => {
   let generatorPath = path.join(__dirname, '../generators/app');
   // Default prompts
   let prompts = {
-
+    webpackLoadersConfirm: false,
+    webpackPluginsConfirm: false
   };
   // Async timeout
   let originalTimeout;
 
   beforeEach(() => {
     originalTimeout = jest.DEFAULT_TIMEOUT_INTERVAL;
-    jest.DEFAULT_TIMEOUT_INTERVAL = 100000; // 100 second timeout
+    jest.DEFAULT_TIMEOUT_INTERVAL = 30000; // 30 second timeout
   });
 
   beforeAll(() => {
     return helpers.run(generatorPath)
       .withPrompts(prompts)
-      .withArguments(['noinstall']);
+      .withArguments(['skip-install']);
   });
 
   it('creates files', () => {

@@ -15,7 +15,13 @@ npm install -g generator-anzdig-aw-es6
 Then generate your new project:
 
 ```bash
+mkdir awesome-project && cd awesome-project
 yo anzdig-aw-es6
+```
+
+If you need to skip the npm install add the following argument
+```bash
+yo anzdig-aw-es6 --skip-install
 ```
 
 ## Usage

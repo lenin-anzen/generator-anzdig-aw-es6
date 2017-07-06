@@ -45,7 +45,8 @@
     "prepublish": "nsp check",
     "pretest": "eslint . --fix",
     "test": "jest",
-    "docs": "jsdoc -c jsdoc.json"
+    "docs": "jsdoc -c jsdoc.json",
+    "preversion": "npm test"
   },
   "eslintConfig": {
     "extends": "xo-space",
