@@ -1,6 +1,6 @@
 {
   "name": "generator-anzdig-aw-es6",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Angular 1, webpack 2, ECMAScript 6, Babel",
   "homepage": "https://lenin-anzen.github.io/generator-anzdig-aw-es6",
   "author": {
