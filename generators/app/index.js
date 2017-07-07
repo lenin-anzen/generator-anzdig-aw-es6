@@ -50,7 +50,7 @@ class AppClass extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the awesome ' + chalk.red('anzdig-aw-es6') + ' generator!'
+      'Welcome to the amazing ' + chalk.red('anzdig-aw-es6') + ' generator!'
     ));
   }
 
@@ -71,7 +71,9 @@ class AppClass extends Generator {
   }
 
   /**
-   * 
+   * Install dependencies
+   * @override
+   * @return {void}
    */
   install() {
     if (this.options['skip-install'] !== true) {

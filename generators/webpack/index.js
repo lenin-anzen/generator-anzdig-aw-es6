@@ -41,6 +41,7 @@ class WebpackClass extends Generator {
    * @return {void}
    */
   install() {
+    const currentPkg = this.fs.readJSON(this.destinationPath('package.json'), {});
     let packages = ['webpack'];
     if (this.props.webpackLoadersConfirm && _.size(this.props.webpackLoadersOptions) > 0) {
       _.each(this.props.webpackLoadersOptions, option => {
