@@ -9,9 +9,10 @@
     "url": "https://travis-ci.org/lenin-anzen"
   },
   "files": [
-    "generators"
+    "generators",
+    "docs"
   ],
-  "main": "generators/index.js",
+  "main": "generators/app/index.js",
   "keywords": [
     "yeoman",
     "generator",

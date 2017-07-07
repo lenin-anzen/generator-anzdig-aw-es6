@@ -8,7 +8,7 @@
     "destination": "./docs",
     "template": "node_modules/tui-jsdoc-template",
     "package": "package.json",
-    "tutorials": "tutorial"
+    "tutorials": "tutorials"
   },
   "templates": {
     "logo": {
@@ -17,7 +17,11 @@
         "height": "14px"
     },
     "name": "Generator",
-    "footerText": "MIT license Copyright (c) Lenin Meza"
+    "footerText": "MIT license Copyright (c) Lenin Meza",
+    "tabNames": {
+        "api": "API",
+        "tutorials": "Tutorials"
+    }
   },
   "plugins": [
     "plugins/markdown"

@@ -26,7 +26,7 @@
     <div class="title">
         <h1><a href="index.html" class="link">Generator</a></h1>
         
-            <span class="version">v0.0.4</span>
+            <span class="version">v0.0.6</span>
         
     </div>
     <div class="search-container" id="search-container">
@@ -39,7 +39,7 @@
                 <a href="#"><h4>API</h4></a>
             </li>
             <li id="examples-tab">
-                <a href="#"><h4>Examples</h4></a>
+                <a href="#"><h4>Tutorials</h4></a>
             </li>
         </ol>
     
@@ -98,6 +98,7 @@ class WebpackClass extends Generator {
    * @return {void}
    */
   install() {
+    // Const currentPkg = this.fs.readJSON(this.destinationPath('package.json'), {});
     let packages = ['webpack'];
     if (this.props.webpackLoadersConfirm &amp;&amp; _.size(this.props.webpackLoadersOptions) > 0) {
       _.each(this.props.webpackLoadersOptions, option => {
@@ -114,6 +115,9 @@ class WebpackClass extends Generator {
       _.each(this.props.webpackPluginsOptions, option => {
         packages.push(option);
       });
+    }
+    if (this.props.webpackDevServerConfirm) {
+      packages.push('webpack-dev-server');
     }
     if (this.options['skip-install'] !== true) {
       this.npmInstall(
