@@ -3,10 +3,10 @@ module.exports = [
     type: 'confirm',
     name: 'webpackLoadersConfirm',
     message: 'Would you like to use loaders?',
-    default: true
+    default: true,
   },
   {
-    when: function (response) {
+    when: function(response) {
       return response.webpackLoadersConfirm;
     },
     type: 'checkbox',
@@ -16,33 +16,33 @@ module.exports = [
       {
         name: 'RawLoader',
         value: 'raw-loader',
-        checked: false
+        checked: false,
       },
       {
         name: 'URLLoader',
         value: 'url-loader',
-        checked: false
+        checked: false,
       },
       {
         name: 'FileLoader',
         value: 'file-loader',
-        checked: false
+        checked: false,
       },
       {
         name: 'JSONLoader',
         value: 'json-loader',
-        checked: false
+        checked: false,
       },
       {
         name: 'StyleLoader',
         value: 'style-loader',
-        checked: false
+        checked: false,
       },
       {
         name: 'CSSLoader',
         value: 'css-loader',
-        checked: false
-      }
-    ]
-  }
+        checked: false,
+      },
+    ],
+  },
 ];

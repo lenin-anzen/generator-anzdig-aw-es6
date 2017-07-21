@@ -30,12 +30,11 @@ class AppClass extends Generator {
 
   /**
    * Include the subgenerators.
-   * @override
-   * @requires ../package
+   * @requires module:../package
    * @see {@link PackageClass}
-   * @requires ../webpack
+   * @requires module:../webpack
    * @see {@link WebpackClass}
-   * @return {void}
+   * @override
    */
   initializing() {
     this.composeWith(require.resolve('../package'));
@@ -55,22 +54,6 @@ class AppClass extends Generator {
   }
 
   /**
-   * Saving configurations and configure the project (creating .editorconfig files and other metadata files)
-   * @override
-   * @return {void}
-   */
-  configuring() {
-  }
-
-  /**
-   * Where you write the generator specific files (routes, controllers, etc)
-   * @override
-   * @return {void}
-   */
-  writing() {
-  }
-
-  /**
    * Install dependencies
    * @override
    * @return {void}
@@ -78,7 +61,7 @@ class AppClass extends Generator {
   install() {
     if (this.options['skip-install'] !== true) {
       this.installDependencies({
-        bower: false
+        bower: false,
       });
     }
   }

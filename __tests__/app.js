@@ -10,7 +10,7 @@ describe('generator-anzdig-aw-es6:app', () => {
   // Default prompts
   let prompts = {
     webpackLoadersConfirm: false,
-    webpackPluginsConfirm: false
+    webpackPluginsConfirm: false,
   };
   // Async timeout
   let originalTimeout;
@@ -29,7 +29,7 @@ describe('generator-anzdig-aw-es6:app', () => {
   it('creates files', () => {
     assert.file([
       'package.json',
-      '.gitignore'
+      '.gitignore',
     ]);
   });
 

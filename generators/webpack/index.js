@@ -29,7 +29,7 @@ class WebpackClass extends Generator {
     prompts = prompts.concat(require('./prompts/loaders'));
     prompts = prompts.concat(require('./prompts/plugins'));
     prompts = prompts.concat(require('./prompts/dev-server'));
-    return this.prompt(prompts).then(props => {
+    return this.prompt(prompts).then((props) => {
       // To access props later use this.props.someAnswer;
       this.props = props;
     });
@@ -41,10 +41,13 @@ class WebpackClass extends Generator {
    * @return {void}
    */
   install() {
-    // Const currentPkg = this.fs.readJSON(this.destinationPath('package.json'), {});
     let packages = ['webpack'];
-    if (this.props.webpackLoadersConfirm && _.size(this.props.webpackLoadersOptions) > 0) {
-      _.each(this.props.webpackLoadersOptions, option => {
+    if (
+      this.props.webpackLoadersConfirm
+        &&
+      _.size(this.props.webpackLoadersOptions
+    ) > 0) {
+      _.each(this.props.webpackLoadersOptions, (option) => {
         switch (option) {
           case 'extract-text-webpack-plugin':
           case 'html-webpack-plugin':
@@ -54,8 +57,12 @@ class WebpackClass extends Generator {
         }
       });
     }
-    if (this.props.webpackPluginsConfirm && _.size(this.props.webpackPluginsOptions) > 0) {
-      _.each(this.props.webpackPluginsOptions, option => {
+    if (
+      this.props.webpackPluginsConfirm
+        &&
+      _.size(this.props.webpackPluginsOptions
+    ) > 0) {
+      _.each(this.props.webpackPluginsOptions, (option) => {
         packages.push(option);
       });
     }
@@ -66,7 +73,7 @@ class WebpackClass extends Generator {
       this.npmInstall(
         packages,
         {
-          'save-dev': true
+          'save-dev': true,
         }
       );
     }

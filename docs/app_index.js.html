@@ -26,7 +26,7 @@
     <div class="title">
         <h1><a href="index.html" class="link">Generator</a></h1>
         
-            <span class="version">v0.0.6</span>
+            <span class="version">v0.0.7</span>
         
     </div>
     <div class="search-container" id="search-container">
@@ -43,7 +43,7 @@
             </li>
         </ol>
     
-    <div class="lnb-api hidden"><h3>Classes</h3><ul><li><a href="AppClass.html">AppClass</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="AppClass_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="AppClass.html#configuring">configuring</a></li><li><a href="AppClass.html#end">end</a></li><li><a href="AppClass.html#initializing">initializing</a></li><li><a href="AppClass.html#install">install</a></li><li><a href="AppClass.html#prompting">prompting</a></li><li><a href="AppClass.html#writing">writing</a></li></ul></div></li><li><a href="PackageClass.html">PackageClass</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="PackageClass_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="PackageClass.html#configuring">configuring</a></li><li><a href="PackageClass.html#initializing">initializing</a></li><li><a href="PackageClass.html#prompting">prompting</a></li></ul></div></li><li><a href="WebpackClass.html">WebpackClass</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="WebpackClass_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="WebpackClass.html#initializing">initializing</a></li><li><a href="WebpackClass.html#install">install</a></li><li><a href="WebpackClass.html#prompting">prompting</a></li></ul></div></li></ul></div>
+    <div class="lnb-api hidden"><h3>Classes</h3><ul><li><a href="AngularJSClass.html">AngularJSClass</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="AngularJSClass_sub"></div></li><li><a href="AppClass.html">AppClass</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="AppClass_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="AppClass.html#end">end</a></li><li><a href="AppClass.html#initializing">initializing</a></li><li><a href="AppClass.html#install">install</a></li><li><a href="AppClass.html#prompting">prompting</a></li></ul></div></li><li><a href="ESLintClass.html">ESLintClass</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="ESLintClass_sub"></div></li><li><a href="JestClass.html">JestClass</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="JestClass_sub"></div></li><li><a href="JSDocClass.html">JSDocClass</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="JSDocClass_sub"></div></li><li><a href="KarmaClass.html">KarmaClass</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="KarmaClass_sub"></div></li><li><a href="PackageClass.html">PackageClass</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="PackageClass_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="PackageClass.html#configuring">configuring</a></li><li><a href="PackageClass.html#initializing">initializing</a></li><li><a href="PackageClass.html#prompting">prompting</a></li></ul></div></li><li><a href="StylesClass.html">StylesClass</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="StylesClass_sub"></div></li><li><a href="WebpackClass.html">WebpackClass</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="WebpackClass_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="WebpackClass.html#initializing">initializing</a></li><li><a href="WebpackClass.html#install">install</a></li><li><a href="WebpackClass.html#prompting">prompting</a></li></ul></div></li></ul></div>
 </nav>
 <div id="resizer"></div>
 
@@ -87,12 +87,11 @@ class AppClass extends Generator {
 
   /**
    * Include the subgenerators.
-   * @override
-   * @requires ../package
+   * @requires module:../package
    * @see {@link PackageClass}
-   * @requires ../webpack
+   * @requires module:../webpack
    * @see {@link WebpackClass}
-   * @return {void}
+   * @override
    */
   initializing() {
     this.composeWith(require.resolve('../package'));
@@ -112,22 +111,6 @@ class AppClass extends Generator {
   }
 
   /**
-   * Saving configurations and configure the project (creating .editorconfig files and other metadata files)
-   * @override
-   * @return {void}
-   */
-  configuring() {
-  }
-
-  /**
-   * Where you write the generator specific files (routes, controllers, etc)
-   * @override
-   * @return {void}
-   */
-  writing() {
-  }
-
-  /**
    * Install dependencies
    * @override
    * @return {void}
@@ -135,7 +118,7 @@ class AppClass extends Generator {
   install() {
     if (this.options['skip-install'] !== true) {
       this.installDependencies({
-        bower: false
+        bower: false,
       });
     }
   }
