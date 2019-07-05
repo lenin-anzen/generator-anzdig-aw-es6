@@ -37,19 +37,22 @@
   "dependencies": {
     "yeoman-generator": "^1.0.0",
     "chalk": "^1.1.3",
-    "yosay": "^2.0.0"
+    "yosay": "^2.0.0",
+    "snyk": "^1.192.0"
   },
   "jest": {
     "testEnvironment": "node"
   },
   "scripts": {
-    "prepublish": "nsp check",
+    "prepublish": "npm run snyk-protect; nsp check",
     "pretest": "eslint . --fix",
     "test": "jest",
     "docs": "jsdoc -c jsdoc.json",
-    "preversion": "npm test"
+    "preversion": "npm test",
+    "snyk-protect": "snyk protect"
   },
   "repository": "lenin-anzen/generator-anzdig-aw-es6",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "snyk": true
 }
